@@ -1,0 +1,12 @@
+def my_funk(a, b):
+    return a // b
+
+
+a = int(input("Введите делимое >>>"))
+b = int(input("Введите делитель >>>"))
+try:
+    a // b
+except ZeroDivisionError:
+    print("Делить на 0 нельзя")
+else:
+    print(my_funk(a, b))
