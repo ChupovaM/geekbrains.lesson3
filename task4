@@ -1,0 +1,36 @@
+def my_func(x, y):
+    x ** y
+    return x ** y
+
+
+x = int(input("Введите число x >>>"))
+y = -int(input("Введите число y >>>"))
+
+print(my_func(x, y))
+
+#второй вариант решения с циклом
+
+def mu_func():
+    x = int(input("Введите число x >>>"))
+    y = int(input("Введите число y >>>"))
+    if y > 0:
+        y = -y
+    k = 0
+    rez = 1
+    while k > y:
+        rez /= x
+        # print(rez)
+        k -= 1
+        # print(k)
+    return print(rez)
+
+
+print(mu_func())
+
+
+
+
+
+
+
+
