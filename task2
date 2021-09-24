@@ -1,0 +1,42 @@
+def customer_date():
+    name = str(input("Введите имя >>>"))
+    surname = str(input("Введите фамилию >>>"))
+    day_born = int(input("Введите день рождения >>>"))
+    month_born = int(input("Введите месяц рождения >>>"))
+    year_born = int(input("Введите год рождения >>>"))
+    date_born = str('{:0>2}.{:0>2}.{}'.format(day_born, month_born, year_born))
+    city = str(input("Введите город проживания >>>"))
+    e_mail = str(input("Введите e_mail >>>"))
+    phone_num = int(input("Введите номер телефона >>>"))
+    full_date = str('{} {},{},{},{},{}'.format(name, surname, date_born, city, e_mail, phone_num))
+
+    return full_date
+
+
+print(customer_date())
+
+#второй вариант с отловом ошибки
+def customer_date():
+    name = str(input("Введите имя >>>"))
+    surname = str(input("Введите фамилию >>>"))
+    try:
+        day_born = int(input("Введите день рождения >>>"))
+        month_born = int(input("Введите месяц рождения >>>"))
+        year_born = int(input("Введите год рождения >>>"))
+    except ValueError:
+        return print("Неверное введено дата, месяц или год рождения, только числа")
+    else:
+        date_born = str('{:0>2}.{:0>2}.{}'.format(day_born, month_born, year_born))
+        city = str(input("Введите город проживания >>>"))
+        e_mail = str(input("Введите e_mail >>>"))
+    try:
+        phone_num = int(input("Введите номер телефона >>>"))
+    except ValueError:
+        return print("Неверное введен номер телефона, только числа")
+    else:
+        full_date = str('{} {},{},{},{},{}'.format(name, surname, date_born, city, e_mail, phone_num))
+
+    return full_date
+
+
+print(customer_date())
