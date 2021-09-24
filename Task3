@@ -1,0 +1,13 @@
+def my_func():
+    arg_1 = int(input("Введите первое число >>>"))
+    arg_2 = int(input("Введите второе число >>>"))
+    arg_3 = int(input("Введите третье число >>>"))
+    a = max(arg_1, arg_2)
+    #print(a)
+    b = max(min(arg_1, arg_2), arg_3)
+    #print(b)
+    summa = a + b
+    return summa
+
+
+print(my_func())
